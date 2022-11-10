@@ -29,9 +29,9 @@
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-tint"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Kolam</span>
+                        <span class="info-box-text">Kelas</span>
                         <span class="info-box-number">
-                            <small>Kolam</small>
+                            <small>Kelas</small>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -44,7 +44,7 @@
                     <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thermometer"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Jumlah Data Kolam</span>
+                        <span class="info-box-text">Jumlah Data Kelas</span>
                         <span class="info-box-number"></span>
                     </div>
                     <!-- /.info-box-content -->
@@ -71,24 +71,24 @@
             </div>
             <!-- /.col -->
         </div>
-        <div class="card bg-gradient-info">
+        <div class="card">
             <div class="card-header border-0">
                 <h3 class="card-title">
                     <i class="fas fa-th mr-1"></i>
-                    Sales Graph
+                    Graph
                 </h3>
 
                 <div class="card-tools">
-                    <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
+                    <button type="button" class="btn bg-dark btn-sm" data-card-widget="collapse">
                         <i class="fas fa-minus"></i>
                     </button>
-                    <button type="button" class="btn bg-info btn-sm" data-card-widget="remove">
+                    <button type="button" class="btn bg-dark btn-sm" data-card-widget="remove">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
             </div>
             <div class="card-body">
-                <canvas class="chart" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                <canvas class="chart" id="graphChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
             </div>
             <!-- /.card-footer -->
         </div>
@@ -98,7 +98,7 @@
                     <div class="card-header">
                         <h3 class="card-title">
                             <i class="far fa-chart-bar"></i>
-                            LDR
+                            Current Data
                         </h3>
 
                         <div class="card-tools">
@@ -116,12 +116,12 @@
                             <div class="col-12 col-md-6 text-center">
                                 <input type="text" class="knob" value="40" data-width="125" data-height="125" data-fgColor="#00c0ef">
 
-                                <div class="knob-label">Disk Space</div>
+                                <div class="knob-label">Temperature</div>
                             </div>
                             <div class="col-12 col-md-6 text-center">
                                 <input type="text" class="knob" value="40" data-width="125" data-height="125" data-fgColor="#39CCCC">
 
-                                <div class="knob-label">Disk Space</div>
+                                <div class="knob-label">Lamp</div>
                             </div>
 
                             <!-- ./col -->
@@ -133,104 +133,61 @@
                         <div class="col-12 text-center">
                             <input type="text" class="knob" value="40" data-width="125" data-height="125" data-fgColor="#39CCCC">
 
-                            <div class="knob-label">Disk Space</div>
+                            <div class="knob-label">Projector</div>
                         </div>
                     </div>
 
                     <!-- /.card-body -->
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                        <h3 class="card-title">RFID</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
-                                    <th>Platform(s)</th>
-                                    <th>Engine version</th>
-                                    <th>CSS grade</th>
+                                    <th>No</th>
+                                    <th>RFID</th>
+                                    <th>Name</th>
                                 </tr>
                             </thead>
                             <tr>
-                                <td>Gecko</td>
-                                <td>Netscape Navigator 9</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.0</td>
-                                <td>Win 95+ / OSX.1+</td>
                                 <td>1</td>
-                                <td>A</td>
+                                <td>1234:234234:W34234:234234</td>
+                                <td>Athailah Adhar</td>
                             </tr>
                             <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.1</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.1</td>
-                                <td>A</td>
+                                <td>2</td>
+                                <td>1234:234234:W34234:234234</td>
+                                <td>Rifaldi Indrajaya</td>
                             </tr>
                             <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.2</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.2</td>
-                                <td>A</td>
+                                <td>3</td>
+                                <td>1234:234234:W34234:234234</td>
+                                <td>Hadad Al Akbar</td>
                             </tr>
                             <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.3</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.3</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.4</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.4</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.5</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.5</td>
-                                <td>A</td>
+                                <td>4</td>
+                                <td>1234:234234:W34234:234234</td>
+                                <td>Nevile Cornelius</td>
                             </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
-                                    <th>Platform(s)</th>
-                                    <th>Engine version</th>
-                                    <th>CSS grade</th>
-                                </tr>
-                            </tfoot>
                         </table>
-                        <div class="row">
+                        <div class="row mt-2">
                             <div class="col-sm-12 col-md-5">
-                                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+                                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 57 entries</div>
                             </div>
-                            <div class="col-sm-12 col-md-7">
+                            <div class="col-sm-12 col-md-7 ">
                                 <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
                                     <ul class="pagination">
                                         <li class="paginate_button page-item previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
                                         <li class="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
                                         <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
                                         <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-                                        <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                                        <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
-                                        <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
                                         <li class="paginate_button page-item next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
                                     </ul>
                                 </div>
@@ -269,6 +226,52 @@
     <script src="{{ asset('AdminLTE//plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
     <script src="{{ asset('AdminLTE//plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
     <script src="{{ asset('AdminLTE//plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+    <script>
+        // Get context with jQuery - using jQuery's .get() method.
+        var lineChartCanvasPh = $('#graphChart').get(0).getContext('2d')
+
+        var lineChartDataPh = {
+            labels: [1111, 2222, 3333, 4444, 5555, 6666, 7777, 8888, 9999],
+            datasets: [{
+                label: 'pH',
+                fill: false,
+                tension: 0,
+                backgroundColor: '#fca903',
+                borderColor: '#fca903',
+                pointRadius: true,
+                hoverRadius: 8,
+                borderWidth: 3,
+                data: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            }]
+        }
+
+        var lineChartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false,
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false,
+                    }
+                }]
+            },
+        }
+
+        // This will get the first returned node in the jQuery collection.
+        new Chart(lineChartCanvasPh, {
+            type: 'line',
+            data: lineChartDataPh,
+            options: lineChartOptions
+        })
+    </script>
     <script>
         $(function() {
             /* jQueryKnob */
