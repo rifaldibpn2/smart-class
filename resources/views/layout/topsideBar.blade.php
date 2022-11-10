@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css') }}">
-    <link rel="icon" href="{{ asset('AdminLTE/dist/img/aquaponicLogo.png') }}">
+    <link rel="icon" href="{{ asset('AdminLTE/dist/img/smart-class.png') }}">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -32,8 +32,6 @@
     <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('AdminLTE/plugins/chart.js/Chart.min.js') }}"></script>
 
-    <!-- Dicoding IDcamp -->
-    <meta name="dicoding:email" content="akbarhadadal@gmail.com">
 
 </head>
 
@@ -43,7 +41,7 @@
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__wobble" src="#" alt="AquaponicLogo"
+            <img class="animation__wobble" src="{{ asset('AdminLTE/dist/img/smart-class.png') }}" alt="smart-class"
                 height="60" width="60">
         </div>
 
@@ -56,7 +54,7 @@
                         class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="{{ url('/') }}" id="TopTitle" class="nav-link">DASHBOARD</a>
+                <a href="{{ url('/') }}" id="TopTitle" class="nav-link">DASHBOARD SMART CLASS</a>
             </li>
         </ul>
 
@@ -86,7 +84,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="{{ url('/') }}" class="brand-link">
-                <img src="{{ asset('AdminLTE/dist/img/aquaponicLogo.png') }}" alt="Aquaponic Logo"
+                <img src="{{ asset('AdminLTE/dist/img/smart-class.png') }}" alt="Smart-logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light ml-3">SMART CLASS</span>
             </a>
@@ -132,10 +130,16 @@
                         </li>
 
                         
-                        <li id="kolam" class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li id="kelas" class="nav-item">
+                            <a href="/kelas" class="nav-link">
                                 <i class="nav-icon fas fa-tint"></i>
-                                <p>Kolam</p>
+                               <p>Kelas</p> 
+                            </a>
+                        </li>
+                        <li id="user" class="nav-item">
+                            <a href="/admin/user" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>Manage User</p>
                             </a>
                         </li>
                     </ul>
