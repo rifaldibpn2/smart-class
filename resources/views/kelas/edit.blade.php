@@ -32,10 +32,6 @@
                         <input autocomplete="off" type="text" class="form-control" id="name" name="name" value="{{ $kelas->name }}" placeholder="Nama Kelas" required>
                     </div>
                     <div class="form-group">
-                        <label for="area">Area</label>
-                        <input type="number" class="form-control" id="area" name="area" value="{{ $kelas->area }}" placeholder="Area(m)" required>
-                    </div>
-                    <div class="form-group">
                         <label for="desc">Description</label>
                         <textarea id="desc" name="desc" class="form-control" rows="3" placeholder="Description" required>{{ $kelas->desc }}</textarea>
                     </div>

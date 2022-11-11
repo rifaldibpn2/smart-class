@@ -129,11 +129,11 @@
                             </li>
                         </li>
 
-                        
+
                         <li id="kelas" class="nav-item">
                             <a href="/kelas" class="nav-link">
-                                <i class="nav-icon fas fa-tint"></i>
-                               <p>Kelas</p> 
+                                <i class="nav-icon fas fa-screen-user"></i>
+                               <p>Kelas</p>
                             </a>
                         </li>
                         <li id="user" class="nav-item">

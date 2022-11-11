@@ -40,7 +40,6 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Area</th>
                                         <th>Description</th>
                                         <th>Created At</th>
                                         <th>Action</th>
@@ -51,7 +50,6 @@
                                         <tr>
                                             <td>{{ $kelas->id }}</td>
                                             <td>{{ $kelas->name }}</td>
-                                            <td>{{ $kelas->area }} m</td>
                                             <td>{{ $kelas->desc }}</td>
                                             <td>{{ $kelas->created_at }}</td>
                                             <td><a href="{{ route('kelas.edit', $kelas->id) }}" class="btn btn-info">

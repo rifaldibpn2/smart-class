@@ -29,9 +29,9 @@ class KelasController extends Controller
 
     public function edit($id)
     {
-        $Kelas = Kelas::findOrFail($id);
+        $kelas = Kelas::findOrFail($id);
 
-        return view('kelas.edit', ['Kelas' => $Kelas]);
+        return view('kelas.edit', ['kelas' => $kelas]);
     }
 
     public function update(Request $request, $id)
