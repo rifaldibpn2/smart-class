@@ -128,12 +128,16 @@
                                 </ul>
                             </li>
                         </li>
-
-
                         <li id="kelas" class="nav-item">
                             <a href="/kelas" class="nav-link">
                                 <i class="nav-icon fas fa-screen-user"></i>
                                <p>Kelas</p>
+                            </a>
+                        </li>
+                        <li id="rfid" class="nav-item">
+                            <a href="/rfid" class="nav-link">
+                                <i class="nav-icon fas fa-id-card-clip"></i>
+                               <p>RFID</p>
                             </a>
                         </li>
                         <li id="user" class="nav-item">

@@ -3,6 +3,7 @@
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\RfidController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,7 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-// Kelas 
+// Kelas
 Route::prefix('/kelas')->group(function () {
     Route::get('/', [KelasController::class, 'index'])->name('kelas');
     Route::get('/create', [KelasController::class, 'create']);
@@ -35,6 +36,9 @@ Route::prefix('/kelas')->group(function () {
     Route::post('/{id}', [KelasController::class, 'destroy'])->name('kelas.destroy');
 });
 
+Route::prefix('/rfid')->group(function () {
+    Route::get('/', [RfidController::class, 'index'])->name('rfid');
+});
 
 // Admin Routes
 Route::prefix('/admin')
