@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GrafikController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\RfidController;
 use Illuminate\Support\Facades\Route;
@@ -38,7 +39,7 @@ Route::prefix('/kelas')->group(function () {
 
 // data sensor
 Route::prefix('/datasensor')->group(function () {
-    Route::get('/', [RfidController::class, 'index'])->name('rfid');
+    Route::get('/grafik', [GrafikController::class, 'grafik'])->name('data.grafik');
 });
 
 // Admin Routes
