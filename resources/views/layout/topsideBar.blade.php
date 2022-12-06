@@ -130,13 +130,13 @@
                         </li>
                         <li id="kelas" class="nav-item">
                             <a href="/kelas" class="nav-link">
-                                <i class="nav-icon fas fa-screen-user"></i>
+                                <i class="nav-icon fas fa-landmark"></i>
                                <p>Kelas</p>
                             </a>
                         </li>
                         <li id="rfid" class="nav-item">
                             <a href="/rfid" class="nav-link">
-                                <i class="nav-icon fas fa-id-card-clip"></i>
+                                <i class="nav-icon fas fa-id-card"></i>
                                <p>RFID</p>
                             </a>
                         </li>
