@@ -14,15 +14,10 @@ class DataSensor extends Model
         'kelas_id',
         'humidity',
         'projector',
-        'room',
         'temperature',
         'time',
+        'date',
     ];
-
+    
     protected $hidden = [];
-
-    public function kelas()
-    {
-        return $this->belongsTo(Kelas::class);
-    }
 }

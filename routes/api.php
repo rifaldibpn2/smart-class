@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\API\ObjectApi;
+use App\Http\API\SensorApi;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,13 @@ use App\Http\API\ObjectApi;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-//panggil Api dataobject
-Route::get('/dataobject', [ObjectApi::class, 'index']);
-Route::put('/dataobject/e', [ObjectApi::class, 'updateData']);
+
+Route::get('/sensor', [SensorApi::class, 'index']);
+Route::post('/sensor/a', [SensorApi::class, 'addData']);
+
+Route::get('/object', [ObjectApi::class, 'index']);
+Route::put('/object/e', [ObjectApi::class, 'updateData']);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
