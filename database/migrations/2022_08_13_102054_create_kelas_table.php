@@ -17,8 +17,6 @@ class CreateKelasTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('desc')->nullable();
-            $table->float('temperature')->nullable();
-            $table->float('ldr')->nullable();
             $table->timestamps();
         });
     }
