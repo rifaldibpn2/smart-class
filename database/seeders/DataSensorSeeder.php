@@ -1,39 +1,43 @@
 <?php
-//dummy data DataSensor
-$datasensor = [
-    [
-        'id' => 1,
-        'kelas_id' => 1,
-        'humidity' => 0,
-        'projector' => 0,
-        'room' => 0,
-        'temperature' => 0,
-        'time' => '00:00:00',
-        'created_at' => '2021-05-01 00:00:00',
-        'updated_at' => '2021-05-01 00:00:00',
-    ],
-    [
-        'id' => 2,
-        'kelas_id' => 2,
-        'humidity' => 0,
-        'projector' => 0,
-        'room' => 0,
-        'temperature' => 0,
-        'time' => '00:00:00',
-        'created_at' => '2021-05-01 00:00:00',
-        'updated_at' => '2021-05-01 00:00:00',
-    ],
-    [
-        'id' => 3,
-        'kelas_id' => 3,
-        'humidity' => 0,
-        'projector' => 0,
-        'room' => 0,
-        'temperature' => 0,
-        'time' => '00:00:00',
-        'created_at' => '2021-05-01 00:00:00',
-        'updated_at' => '2021-05-01 00:00:00',
-    ]
-    
-];
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\DataSensor;
+
+class DataSensorSeeder extends Seeder
+{
+    public function run()
+    {
+        DataSensor::create([
+            'id' => 1,
+            'kelas_id' => 1,
+            'humidity' => 50,
+            'projector' => 0,
+            'temperature' => 30,
+            'time' => '07:00:00',
+            'date' => '2021-12-06',
+        ]);
+
+        DataSensor::create([
+            'id' => 2,
+            'kelas_id' => 2,
+            'humidity' => 50,
+            'projector' => 0,
+            'temperature' => 30,
+            'time' => '07:00:00',
+            'date' => '2021-12-06',
+        ]);
+
+        DataSensor::create([
+            'id' => 3,
+            'kelas_id' => 3,
+            'humidity' => 50,
+            'projector' => 0,
+            'temperature' => 30,
+            'time' => '07:00:00',
+            'date' => '2021-12-06',
+        ]);
+    }
+}
+
 ?>
