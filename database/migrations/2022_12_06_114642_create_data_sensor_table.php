@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('room')->nullable();
             $table->float('temperature')->nullable();
             $table->time('time')->nullable();
+            $table->timestamps();
 
             $table->foreign('kelas_id')->references('id')->on('kelas')->onDelete('cascade');
         });

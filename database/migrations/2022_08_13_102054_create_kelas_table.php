@@ -17,6 +17,15 @@ class CreateKelasTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('desc')->nullable();
+            $table->float('ac_high')->nullable();
+            $table->float('ac_medium')->nullable();
+            $table->time('active')->nullable();
+            $table->boolean('door_lock')->nullable();
+            $table->boolean('electricity')->nullable();
+            $table->boolean('lamp_1')->nullable();
+            $table->boolean('lamp_2')->nullable();
+            $table->boolean('lcd')->nullable();
+            $table->boolean('pc')->nullable();
             $table->timestamps();
         });
     }

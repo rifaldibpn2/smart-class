@@ -13,6 +13,15 @@ class Kelas extends Model
         'id',
         'name',
         'desc',
+        'ac_high',
+        'ac_medium',
+        'active',
+        'door_lock',
+        'electricity',
+        'lamp_1',
+        'lamp_2',
+        'lcd',
+        'pc',
     ];
 
     protected $hidden = [];

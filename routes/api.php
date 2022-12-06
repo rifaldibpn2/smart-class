@@ -15,7 +15,8 @@ use App\Http\API\ObjectApi;
 |
 */
 //panggil Api dataobject
-Route::get('dataobject', [ObjectApi::class, 'index']);
+Route::get('/dataobject', [ObjectApi::class, 'index']);
+Route::put('/dataobject/e', [ObjectApi::class, 'updateData']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

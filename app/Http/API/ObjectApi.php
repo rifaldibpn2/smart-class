@@ -1,8 +1,7 @@
 <?php
 namespace App\Http\API;
 
-use App\Helpers\ApiFormat;
-use App\Models\DataObject;
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -10,13 +9,17 @@ class ObjectApi extends Controller
 {
     public function index()
     {
-        $data = DataObject::all();
-        if ($data) {
-            return ApiFormat::createResponse($data, 'DataObject', 200);
-        } else {
-            return ApiFormat::createResponse(null, 'Error', 404);
-        }
+        $data = Kelas::all();
+        return response()->json(['message' => 'Success', 'data' => $data]);
+    }
+
+    public function updateData(Request $request) {
+        $data = $request->all();
+
+        $cl = Kelas::findOrFail(1);
+
+        $cl->update($data);
+
+        return response()->json(['message' => 'Updated!']);
     }
 }
-
-?>
