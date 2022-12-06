@@ -36,7 +36,8 @@ Route::prefix('/kelas')->group(function () {
     Route::post('/{id}', [KelasController::class, 'destroy'])->name('kelas.destroy');
 });
 
-Route::prefix('/rfid')->group(function () {
+// data sensor
+Route::prefix('/datasensor')->group(function () {
     Route::get('/', [RfidController::class, 'index'])->name('rfid');
 });
 

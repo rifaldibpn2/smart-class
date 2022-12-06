@@ -116,13 +116,13 @@
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Tabel</p>
+                                            <p>Grafik</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Grafik</p>
+                                            <p>Tabel</p>
                                         </a>
                                     </li>
                                 </ul>
@@ -132,12 +132,6 @@
                             <a href="/kelas" class="nav-link">
                                 <i class="nav-icon fas fa-landmark"></i>
                                <p>Kelas</p>
-                            </a>
-                        </li>
-                        <li id="rfid" class="nav-item">
-                            <a href="/rfid" class="nav-link">
-                                <i class="nav-icon fas fa-id-card"></i>
-                               <p>RFID</p>
                             </a>
                         </li>
                         <li id="user" class="nav-item">
