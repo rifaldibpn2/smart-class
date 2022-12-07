@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/sidebar.css') }}">
 
     <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('AdminLTE/plugins/chart.js/Chart.min.js') }}"></script>
@@ -81,7 +82,7 @@
     </nav>
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-style">
             <!-- Brand Logo -->
             <a href="{{ url('/') }}" class="brand-link">
                 <img src="{{ asset('AdminLTE/dist/img/smart-class.png') }}" alt="Smart-logo"
@@ -97,7 +98,7 @@
                         data-accordion="false">
 
                         <li id="beranda" class="nav-item">
-                            <a href="/" class="nav-link">
+                            <a href="/" class="nav-link" style="color: rgb(255, 255, 255);">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Beranda</p>
                             </a>
@@ -105,7 +106,7 @@
 
                         <li id="datasensorAktif">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="#" class="nav-link " style="color: rgb(255, 255, 255);" >
                                     <i class="nav-icon fas fa-chart-pie"></i>
                                     <p>
                                         Data Sensor
@@ -114,13 +115,13 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="/datasensor/grafik" class="nav-link">
+                                        <a href="/datasensor/grafik" class="nav-link" style="color: rgb(255, 255, 255);">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="#" class="nav-link" style="color: rgb(255, 255, 255);">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Tabel</p>
                                         </a>
@@ -129,13 +130,13 @@
                             </li>
                         </li>
                         <li id="kelas" class="nav-item">
-                            <a href="/kelas" class="nav-link">
+                            <a href="/kelas" class="nav-link" style="color: rgb(255, 255, 255);">
                                 <i class="nav-icon fas fa-landmark"></i>
                                <p>Kelas</p>
                             </a>
                         </li>
                         <li id="user" class="nav-item">
-                            <a href="/admin/user" class="nav-link">
+                            <a href="/admin/user" class="nav-link" style="color: rgb(255, 255, 255);">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>Manage User</p>
                             </a>
