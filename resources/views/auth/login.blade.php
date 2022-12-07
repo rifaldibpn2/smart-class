@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Smart Farm | Login</title>
+    <title>Smart Class | Login</title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -92,31 +92,30 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>Belum Punya Akun?</h3>
+                    <h3>Smart Class</h3>
                     <p>
-                        Silahkan klik tombol "Register" dibawah ini.
+                        Kelas yang dilengkapi dengan berbagai fitur yang dapat membantumempermudah proses pembelajaran
                     </p>
                     <button class="btn transparent" id="sign-up-btn">
-                        Register
+                        Sign up
                     </button>
                 </div>
-                <img src="#" class="image" alt="" />
+                <img src="{{ asset('AdminLTE/dist/img/studygirl.png') }}" class="image" alt="" style="padding-bottom: 150px ;" />
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>Sudah Punya Akun?</h3>
+                    <h3>Fitur Smart class</h3>
                     <p>
-                        Silahkan klik "Login" untuk masuk ke halaman utama website.
+                        Banyak Fitur dismart class ini, seperti ini ini ini ini ini ini
                     </p>
                     <button class="btn transparent" id="sign-in-btn">
-                        Login
+                        Sign in
                     </button>
                 </div>
-                <img src="#" class="image" alt="" />
+                <img src="img/Schooline.png" class="image" alt="" />
             </div>
         </div>
     </div>
-
     <script>
         const sign_in_btn = document.querySelector("#sign-in-btn");
         const sign_up_btn = document.querySelector("#sign-up-btn");
