@@ -39,7 +39,7 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-                    <button type="submit" class="btn solid">Login</button>
+                    <button type="submit" class="btn-black">Login</button>
                 </form>
 
                 <form method="POST" action="{{ route('register') }}" class="sign-up-form">
@@ -84,7 +84,7 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-                    <input type="submit" class="btn" value="Sign up" />
+                    <input type="submit" class="btn-black" value="Sign up" />
                 </form>
             </div>
         </div>
