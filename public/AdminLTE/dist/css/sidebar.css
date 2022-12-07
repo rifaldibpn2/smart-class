@@ -21,3 +21,10 @@
     transition: all 0.4s ease;
     margin-top: 50px;
   }
+
+  .header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
