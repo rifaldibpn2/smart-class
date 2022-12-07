@@ -25,40 +25,6 @@ class KelasSeeder extends Seeder
             'created_at' => '2021-12-06 13:53:50',
             'updated_at' => '2021-12-06 13:53:50',
         ]);
-
-        Kelas::create([
-            'id' => 2,
-            'name' => 'kelas 2',
-            'desc' => 'kelas 2',
-            'ac_high' => 30,
-            'ac_medium' => 15,
-            'active' => '07:00:00',
-            'door_lock' => '0',
-            'electricity' => '0',
-            'lamp_1' => '0',
-            'lamp_2' => '0',
-            'lcd' => '0',
-            'pc' => '0',
-            'created_at' => '2021-12-06 13:53:50',
-            'updated_at' => '2021-12-06 13:53:50',
-        ]);
-
-        Kelas::create([
-            'id' => 3,
-            'name' => 'kelas 3',
-            'desc' => 'kelas 3',
-            'ac_high' => 30,
-            'ac_medium' => 15,
-            'active' => '07:00:00',
-            'door_lock' => '0',
-            'electricity' => '0',
-            'lamp_1' => '0',
-            'lamp_2' => '0',
-            'lcd' => '0',
-            'pc' => '0',
-            'created_at' => '2021-12-06 13:53:50',
-            'updated_at' => '2021-12-06 13:53:50',
-        ]);
     }
 }
 ?>

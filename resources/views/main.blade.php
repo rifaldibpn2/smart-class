@@ -42,8 +42,8 @@
                         <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-database"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Jumlah Data Kelas</span>
-                            <span class="info-box-number"></span>
+                            <span class="info-box-text">Data Sensor</span>
+                            <span class="info-box-number">{{ $sensor_count }}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -113,16 +113,16 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12 col-md-6 text-center">
-                                    <input type="text" class="knob" value="40" data-width="125" data-height="125"
-                                        data-fgColor="#00c0ef">
+                                    <input type="text" class="knob" value="{{ $data->temperature }}" data-width="125"
+                                        data-height="125" data-fgColor="#00c0ef">
 
                                     <div class="knob-label">Temperature</div>
                                 </div>
                                 <div class="col-12 col-md-6 text-center">
-                                    <input type="text" class="knob" value="40" data-width="125" data-height="125"
-                                        data-fgColor="#39CCCC">
+                                    <input type="text" class="knob" value="{{ $data->humidity }}" data-width="125"
+                                        data-height="125" data-fgColor="#39CCCC">
 
-                                    <div class="knob-label">Lamp</div>
+                                    <div class="knob-label">Humidity</div>
                                 </div>
 
                                 <!-- ./col -->
@@ -132,8 +132,8 @@
                         </div>
                         <div class="card-body">
                             <div class="col-12 text-center">
-                                <input type="text" class="knob" value="40" data-width="125" data-height="125"
-                                    data-fgColor="#39CCCC">
+                                <input type="text" class="knob" value="{{ $data->projector }}" data-width="125"
+                                    data-height="125" data-fgColor="#39CCCC">
 
                                 <div class="knob-label">Projector</div>
                             </div>
@@ -157,55 +157,17 @@
                                         <th>Name</th>
                                     </tr>
                                 </thead>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1234:234234:W34234:234234</td>
-                                    <td>Athailah Adhar</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>1234:234234:W34234:234234</td>
-                                    <td>Rifaldi Indrajaya</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>1234:234234:W34234:234234</td>
-                                    <td>Hadad Al Akbar</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>1234:234234:W34234:234234</td>
-                                    <td>Nevile Cornelius</td>
-                                </tr>
+                                <tbody>
+                                    @foreach ($rfid as $item)
+                                        <tr>
+                                            <td>{{ $item->id }}</td>
+                                            <td>{{ $item->rfid_number }}</td>
+                                            <td>{{ $item->user }}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
-                            <div class="row mt-2">
-                                <div class="col-sm-12 col-md-5">
-                                    <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
-                                        Showing 57 entries</div>
-                                </div>
-                                <div class="col-sm-12 col-md-7 ">
-                                    <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-                                        <ul class="pagination">
-                                            <li class="paginate_button page-item previous disabled"
-                                                id="example2_previous"><a href="#" aria-controls="example2"
-                                                    data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                                            <li class="paginate_button page-item active"><a href="#"
-                                                    aria-controls="example2" data-dt-idx="1" tabindex="0"
-                                                    class="page-link">1</a></li>
-                                            <li class="paginate_button page-item "><a href="#"
-                                                    aria-controls="example2" data-dt-idx="2" tabindex="0"
-                                                    class="page-link">2</a></li>
-                                            <li class="paginate_button page-item "><a href="#"
-                                                    aria-controls="example2" data-dt-idx="3" tabindex="0"
-                                                    class="page-link">3</a></li>
-                                            <li class="paginate_button page-item next" id="example2_next"><a
-                                                    href="#" aria-controls="example2" data-dt-idx="7"
-                                                    tabindex="0" class="page-link">Next</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            {{ $rfid->links() }}
                         </div>
 
                         <!-- /.card-body -->
@@ -213,9 +175,6 @@
                 </div>
             </div>
             <!-- /.row -->
-
-
-
 
             <!-- Main Footer -->
             <footer class="main-footer">
