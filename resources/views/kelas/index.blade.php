@@ -41,8 +41,14 @@
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Description</th>
-                                        <th>Temperature</th>
-                                        <th>LDR</th>
+                                        <th>AC High</th>
+                                        <th>AC Medium</th>
+                                        <th>Door Lock</th>
+                                        <th>Electricity</th>
+                                        <th>Lamp 1</th>
+                                        <th>Lamp 2</th>
+                                        <th>LCD</th>
+                                        <th>PC</th>
                                         <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
@@ -53,8 +59,14 @@
                                             <td>{{ $kelas->id }}</td>
                                             <td>{{ $kelas->name }}</td>
                                             <td>{{ $kelas->desc }}</td>
-                                            <td>{{ $kelas->temperature }}</td>
-                                            <td>{{ $kelas->ldr }}</td>
+                                            <td>{{ $kelas->ac_high }}</td>
+                                            <td>{{ $kelas->ac_medium }}</td>
+                                            <td>{{ $kelas->door_lock == 0 ? "False" : "True" }}</td>
+                                            <td>{{ $kelas->electricity == 0 ? "False" : "True" }}</td>
+                                            <td>{{ $kelas->lamp_1 == 0 ? "False" : "True" }}</td>
+                                            <td>{{ $kelas->lamp_2 == 0 ? "False" : "True" }}</td>
+                                            <td>{{ $kelas->lcd == 0 ? "False" : "True" }}</td>
+                                            <td>{{ $kelas->pc == 0 ? "False" : "True" }}</td>
                                             <td>{{ $kelas->created_at }}</td>
                                             <td><a href="{{ route('kelas.edit', $kelas->id) }}" class="btn btn-info">
                                                     <i class="fa fa-pencil"></i>
