@@ -37,6 +37,8 @@ class SensorApi extends Controller
 
             $data = DataSensor::where('id', $dataSensor->id)->get();
 
+            return response()->json(['message' => 'Success Add Sensor', 'data' => $data]);
+
         } catch (Exception $e) {
             return response()->json(['message' => 'Failed', 'error' => $e->getMessage()]);
         }
