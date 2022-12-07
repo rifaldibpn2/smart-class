@@ -8,9 +8,10 @@
                     <h1 class="m-0">Grafik</h1>
                     <div class="form-group">
                         <label class="mt-3">Pilih Kelas</label>
-                        <select id="pilihKelas" onchange="#" class="form-control select2"
-                            style="width: 100%;">
-
+                        <select id="pilihKelas" onchange="#" class="form-control select2" style="width: 100%;">
+                            @foreach ($kelas as $item)
+                                <option {{ $id == $item->id ? 'selected' : '' }} value="{{ $item->id }}" >{{ $item->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div><!-- /.col -->
