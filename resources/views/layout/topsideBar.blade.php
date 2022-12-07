@@ -32,8 +32,6 @@
 
     <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('AdminLTE/plugins/chart.js/Chart.min.js') }}"></script>
-
-
 </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="  font-family: 'Poppins', sans-serif;">
@@ -55,7 +53,7 @@
                         class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="{{ url('/') }}" id="TopTitle" class="nav-link">DASHBOARD SMART CLASS</a>
+                <a href="{{ url('/') }}" id="TopTitle" class="nav-link" >DASHBOARD SMART CLASS</a>
             </li>
         </ul>
 
@@ -87,7 +85,7 @@
             <a href="{{ url('/') }}" class="brand-link">
                 <img src="{{ asset('AdminLTE/dist/img/smart-class.png') }}" alt="Smart-logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light ml-3">SMART CLASS</span>
+                <span class="brand-text font-weight-light ml-3" style="color: white">SMART CLASS</span>
             </a>
             <div style="height: 10px"></div>
             <!-- Sidebar -->
@@ -98,7 +96,7 @@
                         data-accordion="false">
 
                         <li id="beranda" class="nav-item">
-                            <a href="/" class="nav-link" style="color: rgb(255, 255, 255);">
+                            <a href="/" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Beranda</p>
                             </a>
@@ -204,4 +202,12 @@
     <!-- Page specific script -->
 </body>
 
+<style>
+    .nav-link2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    transition: all 0.4s ease;
+    }
+</style>
 </html>
