@@ -199,6 +199,9 @@
         <script src="{{ asset('AdminLTE//plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
         <script src="{{ asset('AdminLTE//plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
         <script>
+            
+
+
             // Get context with jQuery - using jQuery's .get() method.
             var lineChartCanvasPh = $('#graphChart').get(0).getContext('2d')
 
@@ -249,15 +252,6 @@
                 /* jQueryKnob */
 
                 $('.knob').knob({
-                    /*change : function (value) {
-                     //console.log("change : " + value);
-                     },
-                     release : function (value) {
-                     console.log("release : " + value);
-                     },
-                     cancel : function () {
-                     console.log("cancel : " + this.value);
-                     },*/
                     draw: function() {
 
                         // "tron" case
