@@ -8,7 +8,7 @@
                     <h1 class="m-0">Grafik</h1>
                     <div class="form-group">
                         <label class="mt-3">Pilih Kelas</label>
-                        <select id="pilihKelas" onchange="#" class="form-control select2" style="width: 100%;">
+                        <select id="pilihKelas" onchange="handleSelectChange()" class="form-control select2" style="width: 100%;">
                             @foreach ($kelas as $item)
                                 <option {{ $id == $item->id ? 'selected' : '' }} value="{{ $item->id }}">
                                     {{ $item->name }}</option>
@@ -33,7 +33,7 @@
             To &nbsp; &nbsp; <input value="{{ $to }}" type="date" id="max" name="max"
                 class="form-control col-sm" /> &nbsp; &nbsp;
             <button onclick="handleDateChange()" type="button" class="btn btn-success col-sm">Filter</button> &nbsp; &nbsp;
-            <button type="button" onclick="handleDateChange()" class="btn btn-danger col-sm">
+            <button type="button" onclick="handleSelectChange1()" class="btn btn-danger col-sm">
                 Clear Filter</a>
         </div>
     </div>
@@ -120,7 +120,7 @@
     <script type="text/javascript">
         document.getElementById("TopTitle").innerHTML = "Data Grafik";
 
-        function handleSelectChange(event) {
+        function handleSelectChange1(event) {
             window.location.href = "{{ url('/datasensor/grafik/?kelas=') }}" + $("#pilihKelas").val();
         }
 
@@ -136,22 +136,22 @@
 
         //copy array to new array
         var temperatureArray = [];
-        for (var i = data.length - 1; i >= 0; i--) {
+        for (var i = 0; i < data.length; i++) {
             temperatureArray.push(data[i].temperature);
         }
 
         var humidityArray = [];
-        for (var i = data.length - 1; i >= 0; i--) {
+        for (var i = 0; i < data.length; i++) {
             humidityArray.push(data[i].humidity);
         }
 
         var projectorArray = [];
-        for (var i = data.length - 1; i >= 0; i--) {
+        for (var i = 0; i < data.length; i++) {
             projectorArray.push(data[i].projector);
         }
 
         var timeArray = [];
-        for (var i = data.length - 1; i >= 0; i--) {
+        for (var i = 0; i < data.length; i++) {
             var date = new Date(data[i].created_at);
             var time = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + date.getHours() + ":" +
                 date.getMinutes() + ":" + date.getSeconds();

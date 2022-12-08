@@ -34,7 +34,9 @@ class GrafikController extends Controller
                 ->orderBy("date", "asc")
                 ->get();
         } else {
-            $data = DataSensor::where('kelas_id', $id)->get();
+            $data = DataSensor::where('kelas_id', $id)
+                ->orderBy("date", "asc")
+                ->get();
         }
 
         return view('datasensor.graph', [
