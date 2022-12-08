@@ -34,7 +34,8 @@
     <script src="{{ asset('AdminLTE/plugins/chart.js/Chart.min.js') }}"></script>
 </head>
 
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="  font-family: 'Poppins', sans-serif;">
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed"
+    style="  font-family: 'Poppins', sans-serif;">
 
     <div class="wrapper">
 
@@ -44,40 +45,46 @@
                 height="60" width="60">
         </div>
 
-       <!-- Navbar -->
-       <nav class="main-header navbar navbar-expand header" style="border-bottom: 0px;">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-                        class="fas fa-bars" style="color: white"></i></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="{{ url('/') }}" id="TopTitle" class="nav-link" style="color: white" >DASHBOARD SMART CLASS</a>
-            </li>
-        </ul>
-
-        <!-- Right navbar links -->
-        <ul class="navbar-nav ml-auto">
-            <div class="info">
-                <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#" style="color: white">
-                        {{ Auth::user()->name }}
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            Logout
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand header"
+            style="border-bottom: 0px;  padding-top: 5px;
+       padding-bottom: 5px;
+       background: rgb(0,0,0);
+       background: linear-gradient(315deg, rgba(0,0,0,1) 0%, rgba(21,120,166,1) 100%);
+       border-bottom: 0px;">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"
+                            style="color: white"></i></a>
                 </li>
-            </div>
-        </ul>
-    </nav>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="{{ url('/') }}" id="TopTitle" class="nav-link" style="color: white">DASHBOARD SMART
+                        CLASS</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <div class="info">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="#" style="color: white">
+                            {{ Auth::user()->name }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </nav>
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-style">
@@ -130,7 +137,7 @@
                         <li id="kelas" class="nav-item">
                             <a href="/kelas" class="nav-link" style="color: rgb(255, 255, 255);">
                                 <i class="nav-icon fas fa-landmark"></i>
-                               <p>Kelas</p>
+                                <p>Kelas</p>
                             </a>
                         </li>
                         <li id="user" class="nav-item">
@@ -204,10 +211,11 @@
 
 <style>
     .nav-link2 {
-    font-size: 18px;
-    font-weight: 400;
-    color: rgb(255, 255, 255);
-    transition: all 0.4s ease;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+        transition: all 0.4s ease;
     }
 </style>
+
 </html>
