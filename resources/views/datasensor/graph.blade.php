@@ -10,7 +10,8 @@
                         <label class="mt-3">Pilih Kelas</label>
                         <select id="pilihKelas" onchange="#" class="form-control select2" style="width: 100%;">
                             @foreach ($kelas as $item)
-                                <option {{ $id == $item->id ? 'selected' : '' }} value="{{ $item->id }}" >{{ $item->name }}</option>
+                                <option {{ $id == $item->id ? 'selected' : '' }} value="{{ $item->id }}">
+                                    {{ $item->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -27,12 +28,10 @@
 
     <div class="container-fluid" style="padding:0 30px 0 30px">
         <div id="date_filter" class="row">
-            <input value="#" type="date" id="min" name="min"
+            <input value="#" type="date" id="min" name="min" class="form-control col-sm" /> &nbsp; &nbsp;
+            To &nbsp; &nbsp; <input value="#" type="date" id="max" name="max"
                 class="form-control col-sm" /> &nbsp; &nbsp;
-            To &nbsp; &nbsp; <input value="#" type="date" id="max"
-                name="max" class="form-control col-sm" /> &nbsp; &nbsp;
-            <button onclick="#" type="button"
-                class="btn btn-success col-sm">Filter</button> &nbsp; &nbsp;
+            <button onclick="#" type="button" class="btn btn-success col-sm">Filter</button> &nbsp; &nbsp;
             <button type="button" onclick="#" class="btn btn-danger col-sm">
                 Clear Filter</a>
         </div>
@@ -147,18 +146,13 @@
         document.getElementById("TopTitle").innerHTML = "Data Grafik";
     </script>
 
-    <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
     </aside>
     <!-- /.control-sidebar -->
-    </div>
 
-       
+
     </body>
 
     </html>

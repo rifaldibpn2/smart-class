@@ -37,4 +37,37 @@ class GrafikController extends Controller
             'data' => $data,
         ]);
     }
+
+    public function table(Request $request)
+    {
+        $id = $request->id;
+        $from = $request->from;
+        $to = $request->to;
+
+        if ($id == NULL) {
+            $kelas = Kelas::all();
+            if ($kelas->isEmpty()) {
+                $id = null;
+            } else {
+                $first = $kelas->first();
+                $id = $first->id;
+            }
+        }
+
+        $kelas = Kelas::all();
+
+        if ($from == NULL && $to == NULL) {
+            $data = DataSensor::where('kelas_id', $id)->get();
+        } else {
+            $data = DataSensor::where('kelas_id', $id)->whereBetween("created_at", [$from, $to])->get();
+        }
+
+        return view('datasensor.table', [
+            'id' => $id,
+            'from' => $from,
+            'to' => $to,
+            'kelas' => $kelas,
+            'data' => $data,
+        ]);
+    }
 }

@@ -119,7 +119,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link" style="color: rgb(255, 255, 255);">
+                                        <a href="/datasensor/table" class="nav-link" style="color: rgb(255, 255, 255);">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Tabel</p>
                                         </a>

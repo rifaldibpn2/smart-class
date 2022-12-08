@@ -40,6 +40,7 @@ Route::prefix('/kelas')->group(function () {
 // data sensor
 Route::prefix('/datasensor')->group(function () {
     Route::get('/grafik', [GrafikController::class, 'grafik'])->name('data.grafik');
+    Route::get('/table', [GrafikController::class, 'table'])->name('data.table');
 });
 
 // Admin Routes
