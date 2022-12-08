@@ -27,7 +27,15 @@ class GrafikController extends Controller
 
         $kelas = Kelas::all();
 
-        $data = DataSensor::where('kelas_id', $id)->get();
+        if ($from != NULL && $to != NULL) {
+            $data = DataSensor::where("kelas_id", "=", $id)
+                ->where("created_at", ">=", $from)
+                ->where("created_at", "<=", $to)
+                ->orderBy("date", "asc")
+                ->get();
+        } else {
+            $data = DataSensor::where('kelas_id', $id)->get();
+        }
 
         return view('datasensor.graph', [
             'id' => $id,
