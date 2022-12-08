@@ -112,31 +112,29 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-md-6 text-center">
+                                <div class="col-12 col-md-4 text-center">
                                     <input type="text" class="knob" value="{{ $data->temperature }}" data-width="125"
                                         data-height="125" data-fgColor="#00c0ef">
 
                                     <div class="knob-label">Temperature</div>
                                 </div>
-                                <div class="col-12 col-md-6 text-center">
+                                <div class="col-12 col-md-4 text-center">
                                     <input type="text" class="knob" value="{{ $data->humidity }}" data-width="125"
                                         data-height="125" data-fgColor="#39CCCC">
 
                                     <div class="knob-label">Humidity</div>
+                                </div>
+                                <div class="col-12 col-md-4 text-center">
+                                    <input type="text" class="knob" value="{{ $data->projector }}" data-width="125"
+                                        data-height="125" data-fgColor="#39CCCC">
+
+                                    <div class="knob-label">Projector</div>
                                 </div>
 
                                 <!-- ./col -->
                             </div>
 
                             <!-- /.row -->
-                        </div>
-                        <div class="card-body">
-                            <div class="col-12 text-center">
-                                <input type="text" class="knob" value="{{ $data->projector }}" data-width="125"
-                                    data-height="125" data-fgColor="#39CCCC">
-
-                                <div class="knob-label">Projector</div>
-                            </div>
                         </div>
 
                         <!-- /.card-body -->
@@ -199,25 +197,75 @@
         <script src="{{ asset('AdminLTE//plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
         <script src="{{ asset('AdminLTE//plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
         <script>
-            
+            //get data from controller to javascript
+            var projector = {!! json_encode($projector) !!};
+            var humidity = {!! json_encode($humidity) !!};
+            var temperature = {!! json_encode($temperature) !!};
+
+            //copy array data to new array
+            var projectorArray = [];
+            for (var i = projector.length - 1; i >= 0; i--) {
+                projectorArray.push(projector[i].projector);
+            }
+
+            var humidityArray = [];
+            for (var i = humidity.length - 1; i >= 0; i--) {
+                humidityArray.push(humidity[i].humidity);
+            }
+
+            var temperatureArray = [];
+            for (var i = temperature.length - 1; i >= 0; i--) {
+                temperatureArray.push(temperature[i].temperature);
+            }
+
+            var timeArray = [];
+            for (var i = temperature.length - 1; i >= 0; i--) {
+                var date = new Date(temperature[i].created_at);
+                var time = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                timeArray.push(time);
+            }
+
 
 
             // Get context with jQuery - using jQuery's .get() method.
             var lineChartCanvasPh = $('#graphChart').get(0).getContext('2d')
 
             var lineChartDataPh = {
-                labels: [1111, 2222, 3333, 4444, 5555, 6666, 7777, 8888, 9999],
+                labels: timeArray,
                 datasets: [{
-                    label: 'pH',
-                    fill: false,
-                    tension: 0,
-                    backgroundColor: '#fca903',
-                    borderColor: '#fca903',
-                    pointRadius: true,
-                    hoverRadius: 8,
-                    borderWidth: 3,
-                    data: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-                }]
+                        label: 'Projector',
+                        fill: false,
+                        tension: 0,
+                        backgroundColor: '#fca903',
+                        borderColor: '#fca903',
+                        pointRadius: true,
+                        hoverRadius: 8,
+                        borderWidth: 3,
+                        data: projectorArray
+                    },
+                    {
+                        label: 'Humidity',
+                        fill: false,
+                        tension: 0,
+                        backgroundColor: '#39CCCC',
+                        borderColor: '#39CCCC',
+                        pointRadius: true,
+                        hoverRadius: 8,
+                        borderWidth: 3,
+                        data: humidityArray
+                    },
+                    {
+                        label: 'Temperature',
+                        fill: false,
+                        tension: 0,
+                        backgroundColor: '#007bff',
+                        borderColor: '#007bff',
+                        pointRadius: true,
+                        hoverRadius: 8,
+                        borderWidth: 3,
+                        data: temperatureArray
+                    }
+                ]
             }
 
             var lineChartOptions = {

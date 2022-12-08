@@ -27,6 +27,10 @@ class MainController extends Controller
 
         $rfid = Rfid::paginate(5);
 
+        $temperature = DataSensor::select('temperature', 'created_at')->latest()->limit(20)->get();
+        $humidity = DataSensor::select('humidity', 'created_at')->latest()->limit(20)->get();
+        $projector = DataSensor::select('projector', 'created_at')->latest()->limit(20)->get();
+
         // dd($rfid);
 
         return view('main', [
@@ -35,6 +39,10 @@ class MainController extends Controller
             'sensor_count' => $sensor_count,
             'data' => $data,
             'rfid' => $rfid,
+            'temperature' => $temperature,
+            'humidity' => $humidity,
+            'projector' => $projector,
+
         ]);
     }
 
