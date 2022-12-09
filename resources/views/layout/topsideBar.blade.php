@@ -29,6 +29,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/sidebar.css') }}">
+    <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/dashboard.css') }}">
 
     <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('AdminLTE/plugins/chart.js/Chart.min.js') }}"></script>

@@ -112,24 +112,64 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-md-4 text-center">
-                                    <input type="text" class="knob" value="{{ $data->temperature }}" data-width="125"
-                                        data-height="125" data-fgColor="#00c0ef">
+                                <div class="circle-wrap">
+                                    <div class="circle">
+                                        <div class="mask full-1">
+                                            <div class="fill-1"style="background-color: #00c0ef"></div>
+                                        </div>
+                                        <div class="mask half" >
+                                            <div class="fill-1"style="background-color: #00c0ef"></div>
+                                        </div>
+                                        <div class="inside-circle"> {{ $data->temperature }} 
+                                        </div>
+                                        <div class="labelCircle">Temperature</div>
+                                    </div>
+                                </div>
+                                <div class="circle-wrap">
+                                    <div class="circle">
+                                        <div class="mask full-1">
+                                            <div class="fill-1"style="background-color: #39CCCC"></div>
+                                        </div>
+                                        <div class="mask half">
+                                            <div class="fill-1"style="background-color: #39CCCC"></div>
+                                        </div>
+                                        <div class="inside-circle"> {{ $data->humidity }} 
+                                        </div>
+                                        <div class="labelCircle">Humidity</div>
+                                    </div>
+                                </div>
+                                <div class="circle-wrap">
+                                    <div class="circle">
+                                        <div class="mask full-1">
+                                            <div class="fill-1"style="background-color: #ede15c;"></div>
+                                        </div>
+                                        <div class="mask half">
+                                            <div class="fill-1"style="background-color: #ede15c;"></div>
+                                        </div>
+                                        <div class="inside-circle"> {{ $data->projector }}
+                                        </div>
+                                        <div class="labelCircle">Projector</div>
+                                    </div>
+                                </div>
+                                {{-- <div class="col-12 col-md-4 text-center">
+                                    <input type="text" class="knob" data-readonly="true"
+                                        value="{{ $data->temperature }}" data-width="125" data-height="125"
+                                        data-fgColor="#00c0ef">
 
                                     <div class="knob-label">Temperature</div>
                                 </div>
                                 <div class="col-12 col-md-4 text-center">
-                                    <input type="text" class="knob" value="{{ $data->humidity }}" data-width="125"
-                                        data-height="125" data-fgColor="#39CCCC">
+                                    <input type="text" class="knob" data-readonly="true" value="{{ $data->humidity }}"
+                                        data-width="125" data-height="125" data-fgColor="#39CCCC">
 
                                     <div class="knob-label">Humidity</div>
                                 </div>
                                 <div class="col-12 col-md-4 text-center">
-                                    <input type="text" class="knob" value="{{ $data->projector }}" data-width="125"
-                                        data-height="125" data-fgColor="#39CCCC">
-
+                                    <input type="text" class="knob" data-readonly="true" value=".200"
+                                        data-width="125" data-height="125" data-fgColor="#39CCCC"
+                                        style="width: 49px; height: 30px; position: absolute; vertical-align: middle; margin-top: 30px; margin-left: -69px; border: 0px; background: none; font: bold 18px Arial; text-align: center; color: rgb(60, 141, 188); padding: 0px; appearance: none;">
                                     <div class="knob-label">Projector</div>
-                                </div>
+                                </div> --}}
 
                                 <!-- ./col -->
                             </div>
@@ -221,7 +261,8 @@
             var timeArray = [];
             for (var i = temperature.length - 1; i >= 0; i--) {
                 var date = new Date(temperature[i].created_at);
-                var time = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                var time = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + date.getHours() + ":" +
+                    date.getMinutes() + ":" + date.getSeconds();
                 timeArray.push(time);
             }
 
@@ -368,13 +409,11 @@
                 var sparkline3 = new Sparkline($('#sparkline-3')[0], {
                     width: 240,
                     height: 70,
+                    dotRadius: 1000,
                     lineColor: '#3af221',
                     endColor: '#3af221'
                 })
 
-                sparkline1.draw([1000, 1200, 920, 927, 931, 1027, 819, 930, 1021])
-                sparkline2.draw([515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921])
-                sparkline3.draw([15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21])
 
             })
         </script>

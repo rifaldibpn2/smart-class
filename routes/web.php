@@ -24,7 +24,6 @@ Route::get('/register ', function () {
 Route::middleware(['auth'])->group(function () {
     // Dashboard
     Route::get('/home', [MainController::class, 'index'])->name('home');
-
 });
 
 // Kelas
