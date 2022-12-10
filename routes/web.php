@@ -22,6 +22,9 @@ Route::get('/register ', function () {
 });
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/public', function () {
+        return redirect('/home');
+    });
     // Dashboard
     Route::get('/home', [MainController::class, 'index'])->name('home');
 

@@ -31,12 +31,12 @@ class GrafikController extends Controller
             $data = DataSensor::where("kelas_id", "=", $id)
                 ->where("created_at", ">=", $from)
                 ->where("created_at", "<=", $to)
-                ->orderBy("date", "asc")
+                ->latest()
                 ->limit(20)
                 ->get();
         } else {
             $data = DataSensor::where('kelas_id', $id)
-                ->orderBy("date", "asc")
+                ->latest()
                 ->limit(20)
                 ->get();
         }

@@ -11194,6 +11194,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   left: 0;
   position: fixed;
   top: 0;
+  background: linear-gradient(315deg, rgba(0,0,0,1) 0%, rgba(21,120,166,1) 100%);
 }
 .layout-fixed .control-sidebar {
   bottom: 0;
@@ -11395,7 +11396,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   .wrapper
   .sidebar-dark-primary
   .brand-link:not([class*="navbar"]) {
-  background-color: #343a40;
+  background-color: #0000;
 }
 .layout-navbar-fixed
   .dark-mode

@@ -136,22 +136,25 @@
 
         //copy array to new array
         var temperatureArray = [];
-        for (var i = 0; i < data.length; i++) {
+        for (var i = data.length-1; i >= 0; i--) {
             temperatureArray.push(data[i].temperature);
         }
 
         var humidityArray = [];
-        for (var i = 0; i < data.length; i++) {
+        for (var i = data.length-1; i >= 0; i--) {
+
             humidityArray.push(data[i].humidity);
         }
 
-        var projectorArray = [];
-        for (var i = 0; i < data.length; i++) {
+        var projectorArray = [];    
+        for (var i = data.length-1; i >= 0; i--) {
+
             projectorArray.push(data[i].projector);
         }
 
         var timeArray = [];
-        for (var i = 0; i < data.length; i++) {
+        for (var i = data.length-1; i >= 0; i--) {
+
             var date = new Date(data[i].created_at);
             var time = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + date.getHours() + ":" +
                 date.getMinutes() + ":" + date.getSeconds();
