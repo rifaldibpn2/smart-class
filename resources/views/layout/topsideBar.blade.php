@@ -56,8 +56,8 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"
-                            style="color: white"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                            class="fas fa-bars"style="color: white"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{ url('/') }}" id="TopTitle" class="nav-link" style="color: white">DASHBOARD SMART
@@ -111,38 +111,38 @@
                         </li>
 
                         <li id="datasensorAktif">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link " style="color: rgb(255, 255, 255);" >
-                                    <i class="nav-icon fas fa-chart-pie"></i>
-                                    <p>
-                                        Data Sensor
-                                        <i class="right fas fa-angle-left"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="/datasensor/grafik" class="nav-link" style="color: rgb(255, 255, 255);">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Grafik</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="/datasensor/table" class="nav-link" style="color: rgb(255, 255, 255);">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Tabel</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    Data Sensor
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/datasensor/grafik" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Grafik</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/datasensor/table" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tabel</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         </li>
                         <li id="kelas" class="nav-item">
-                            <a href="/kelas" class="nav-link" style="color: rgb(255, 255, 255);">
+                            <a href="/kelas" class="nav-link">
                                 <i class="nav-icon fas fa-landmark"></i>
                                 <p>Kelas</p>
                             </a>
                         </li>
                         <li id="user" class="nav-item">
-                            <a href="/admin/user" class="nav-link" style="color: rgb(255, 255, 255);">
+                            <a href="/admin/user" class="nav-link">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>Manage User</p>
                             </a>

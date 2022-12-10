@@ -17189,7 +17189,8 @@ body.text-sm .control-sidebar {
   color: #6c757d;
 }
 .nav-pills .nav-link:not(.active):hover {
-  color: #007bff;
+    background:white;
+  color: #000;
 }
 .nav-pills .nav-item.dropdown.show .nav-link:hover {
   color: #fff;
@@ -19809,7 +19810,7 @@ body.text-sm .control-sidebar {
   padding-left: 1rem;
 }
 .dark-mode .nav-pills .nav-link {
-  color: #ced4da;
+  color: #fff;
 }
 .dark-mode .nav-tabs {
   border-color: #56606a;
