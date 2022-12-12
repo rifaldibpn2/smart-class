@@ -69,7 +69,7 @@ class GrafikController extends Controller
         $kelas = Kelas::all();
 
         if ($from == NULL && $to == NULL) {
-            $data = DataSensor::where('kelas_id', $id)->get();
+            $data = DataSensor::where('kelas_id', $id)->latest()->limit(1000)->get();
         } else {
             $data = DataSensor::where('kelas_id', $id)->whereBetween("created_at", [$from, $to])->get();
         }

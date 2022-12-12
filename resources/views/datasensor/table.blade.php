@@ -64,7 +64,7 @@
                                 <tbody>
                                     @foreach ($data as $item)
                                         <tr>
-                                            <td>{{ $item->created_at }}</td>
+                                            <td>{{ $item->date }} {{ $item->time }}</td>
                                             <td>{{ $item->humidity }}</td>
                                             <td>{{ $item->projector }}</td>
                                             <td>{{ $item->temperature }}</td>
