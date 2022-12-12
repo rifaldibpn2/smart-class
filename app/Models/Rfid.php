@@ -11,8 +11,9 @@ class Rfid extends Model
 
     protected $fillable = [
         'id',
-        'user',
         'rfid_number',
+        'status',
         'date',
+        'time',
     ];
 }

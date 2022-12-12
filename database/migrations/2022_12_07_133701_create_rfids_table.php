@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('rfids', function (Blueprint $table) {
             $table->id();
-            $table->string('user');
-            $table->string('rfid_number');
+            $table->string('rfid_number')->unique();
+            $table->boolean('status');
             $table->timestamp('date');
+            $table->time('time');
             $table->timestamps();
         });
     }

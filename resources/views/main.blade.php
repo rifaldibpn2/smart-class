@@ -192,7 +192,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>RFID</th>
-                                        <th>Name</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -200,7 +200,7 @@
                                         <tr>
                                             <td>{{ $item->id }}</td>
                                             <td>{{ $item->rfid_number }}</td>
-                                            <td>{{ $item->user }}</td>
+                                            <td>{{ $item->status == 1 ? "True" : "False" }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

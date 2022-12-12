@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\API;
 
 use App\Models\DataSensor;
@@ -10,8 +11,13 @@ class SensorApi extends Controller
 {
     public function index()
     {
-        $data = DataSensor::all();
-        return response()->json(['message' => 'Success', 'data' => $data]);
+        try {
+            $data = DataSensor::all();
+            
+            return response()->json(['message' => 'Success', 'data' => $data]);
+        } catch (Exception $e) {
+            return response()->json(['message' => 'Failed', 'error' => $e->getMessage()]);
+        }
     }
 
     public function addData(Request $request)
@@ -38,10 +44,8 @@ class SensorApi extends Controller
             $data = DataSensor::where('id', $dataSensor->id)->get();
 
             return response()->json(['message' => 'Success Add Sensor', 'data' => $data]);
-
         } catch (Exception $e) {
             return response()->json(['message' => 'Failed', 'error' => $e->getMessage()]);
         }
     }
-
 }
